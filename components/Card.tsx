@@ -26,14 +26,14 @@ const Card: React.FC<CardProps> = ({ drawnCard }) => {
         <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl border-2 border-yellow-300 bg-gray-800 shadow-2xl shadow-yellow-500/30 flex flex-col overflow-hidden">
           <div className="flex-grow bg-black flex items-center justify-center">
             <img 
-                src={`https://picsum.photos/seed/${card.name.replace(/\s/g, '')}/200/300`} 
+                src={card.cardImg} 
                 alt={card.name} 
                 className={`w-full h-full object-cover transition-transform duration-500 ${orientation === 'Reversed' ? 'rotate-180' : ''}`}
             />
           </div>
           <div className="p-2 text-center bg-gray-900">
             <h3 className="text-sm font-bold text-yellow-200 truncate">{card.name}</h3>
-            <p className="text-xs text-purple-300">{orientation}</p>
+            {/* <p className="text-xs text-purple-300">{orientation}</p> */}
           </div>
         </div>
       </div>

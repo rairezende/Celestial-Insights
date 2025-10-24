@@ -1,5 +1,6 @@
 export interface TarotCard {
   name: string;
+  cardImg: string;
 }
 
 export interface SpreadPosition {
