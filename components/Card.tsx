@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({ drawnCard }) => {
         </div>
         
         {/* Card Front */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl border-2 border-yellow-300 bg-gray-800 shadow-2xl shadow-yellow-500/30 flex flex-col overflow-hidden">
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl border-2 border-stone-400 bg-gray-800 shadow-2xl shadow-yellow-500/30 flex flex-col overflow-hidden">
           <div className="flex-grow bg-black flex items-center justify-center">
             <img 
                 src={card.cardImg} 
@@ -32,12 +32,12 @@ const Card: React.FC<CardProps> = ({ drawnCard }) => {
             />
           </div>
           <div className="p-2 text-center bg-gray-900">
-            <h3 className="text-sm font-bold text-yellow-200 truncate">{card.name}</h3>
+            <h3 className="text-sm font-bold text-stone-300 truncate">{card.name}</h3>
             {/* <p className="text-xs text-purple-300">{orientation}</p> */}
           </div>
         </div>
       </div>
-      <p className="text-center mt-3 font-bold text-purple-200 truncate">{position.name}</p>
+      <p className="text-center mt-3 font-bold text-blue-800 truncate">{position.name}</p>
     </div>
   );
 };
