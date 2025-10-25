@@ -1,5 +1,6 @@
 import React from 'react';
 import { DrawnCard } from '../types';
+import { CardBack } from '../assets/index.ts';
 
 interface CardProps {
   drawnCard: DrawnCard;
@@ -14,12 +15,11 @@ const Card: React.FC<CardProps> = ({ drawnCard }) => {
         className={`relative w-full h-full transition-transform duration-1000 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}
       >
         {/* Card Back */}
-        <div className="absolute w-full h-full backface-hidden rounded-xl border-2 border-purple-400 bg-gradient-to-br from-indigo-700 via-purple-700 to-slate-800 shadow-2xl shadow-purple-500/20 flex items-center justify-center p-2">
-           <div className="w-full h-full border border-purple-300/50 rounded-lg flex items-center justify-center">
-             <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-yellow-200/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.293 2.293a1 1 0 01-1.414 1.414L12 6.414l-2.293 2.293a1 1 0 01-1.414-1.414L10.586 5H13.414L12 3.586 10.293 5.293a1 1 0 01-1.414-1.414L12 2.586l1.707 1.707a1 1 0 011.414 1.414L13 8.414l-2.293-2.293a1 1 0 01-1.414 1.414L12 10.414l-2.293-2.293a1 1 0 01-1.414 1.414L12 13.414l2.293 2.293a1 1 0 011.414-1.414L12 11.586l2.293 2.293a1 1 0 01-1.414 1.414L12 12.414l-2.293 2.293a1 1 0 01-1.414-1.414L10.586 11H13.414L12 12.414l1.707-1.707a1 1 0 011.414 1.414L13 15.414l-2.293-2.293a1 1 0 01-1.414 1.414L12 17.414l-2.293-2.293a1 1 0 01-1.414 1.414L12 20.414l2.293-2.293a1 1 0 011.414 1.414L13 21.414l-2.293-2.293a1 1 0 01-1.414 1.414L12 22.414" />
-             </svg>
-           </div>
+        <div className="absolute w-full h-full backface-hidden rounded-xl border-2 border-stone-400 bg-gradient-to-br from-indigo-700 via-purple-700 to-slate-800 shadow-2xl shadow-purple-500/20 flex items-center justify-center p-2">
+          <div className="w-full h-full border border-purple-300/50 rounded-lg flex items-center justify-center">
+            <img src={CardBack}>
+            </img>
+          </div>
         </div>
         
         {/* Card Front */}
@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({ drawnCard }) => {
           </div>
         </div>
       </div>
-      <p className="text-center mt-3 font-bold text-blue-800 truncate">{position.name}</p>
+      <p className="text-center mt-3 font-bold text-blue-900 truncate">{position.name}</p>
     </div>
   );
 };

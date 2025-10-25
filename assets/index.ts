@@ -1,3 +1,4 @@
+import CardBack from './card-back.png'
 // Major Arcana
 import TheFool from './major-arcana/the-fool.png';
 import TheMagician from './major-arcana/the-magician.png';
@@ -88,6 +89,7 @@ import KingOfPentacles from './pentacles/king-of-pentacles.png';
 
 // Export all cards
 export const TarotDeck = {
+  CardBack,
   // Major Arcana
   TheFool,
   TheMagician,
@@ -179,6 +181,7 @@ export const TarotDeck = {
 
 // You can also export individual cards if needed
 export {
+  CardBack,
   // Major Arcana
   TheFool,
   TheMagician,
