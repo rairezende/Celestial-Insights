@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({ drawnCard }) => {
         </div>
         
         {/* Card Front */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl border-2 border-stone-400 bg-gray-800 shadow-2xl shadow-yellow-500/30 flex flex-col overflow-hidden">
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl border-2 border-stone-400 bg-gray-800 shadow-2xl shadow-stone-500 flex flex-col overflow-hidden">
           <div className="flex-grow bg-black flex items-center justify-center">
             <img 
                 src={card.cardImg} 

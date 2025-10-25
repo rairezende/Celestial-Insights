@@ -21,7 +21,7 @@ const CardStream: React.FC<CardStreamProps> = ({ cards, onSelectCard }) => {
           
             key={card.name}
             onClick={() => onSelectCard(card)}
-            className="w-16 h-24 sm:w-20 sm:h-28 rounded-md border-2 border-stone-500 cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-blue-400/30 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+            className="w-16 h-24 sm:w-20 sm:h-28 rounded-md border-2 border-stone-500 cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-blue-400/30 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
             aria-label="Select a face-down card"
           >
             <img src={CardBack}/>
