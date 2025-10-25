@@ -136,6 +136,7 @@ const App: React.FC = () => {
                 <div className="my-6">
                     <button
                     onClick={handleRevealAndRead}
+                    className= "mt-8 px-6 py-3 bg-stone-300 border-1 border-stone-400 rounded-full text-md text-stone-700 font-bold hover:bg-stone-500/40 transition-all duration-300"
                     >
                     Reveal Cards & Read Fate
                     </button>
