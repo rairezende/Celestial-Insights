@@ -105,7 +105,7 @@ const App: React.FC = () => {
   const cardsToSelect = spread ? spread.positions.length - drawnCards.length : 0;
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-300 via-stone-200 to-stone-300 text-stone-800 font-serif antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-stone-200 text-stone-800 font-serif antialiased overflow-x-hidden">
       <div className="relative z-10 flex flex-col items-center min-h-screen p-4 sm:p-6">
         <Header />
         <main className="flex-grow flex flex-col items-center justify-center gap-10 w-full max-w-5xl mx-auto">
