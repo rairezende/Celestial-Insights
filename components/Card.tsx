@@ -16,7 +16,7 @@ const Card: React.FC<CardProps> = ({ drawnCard }) => {
       >
         {/* Card Back */}
         <div className="absolute w-full h-full backface-hidden rounded-xl border-2 border-stone-400 bg-gradient-to-br from-indigo-700 via-purple-700 to-slate-800 shadow-2xl shadow-purple-500/20 flex items-center justify-center p-2">
-          <div className="w-full h-full border border-purple-300/50 rounded-lg flex items-center justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-10 my-8 justify-center items-center h-72 sm:h-80 perspective-1000">
             <img src={CardBack}>
             </img>
           </div>

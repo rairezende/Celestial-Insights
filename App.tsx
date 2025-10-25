@@ -105,16 +105,16 @@ const App: React.FC = () => {
   const cardsToSelect = spread ? spread.positions.length - drawnCards.length : 0;
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-300 via-stone-200 to-stone-300 text-stone-100 font-serif antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-stone-300 via-stone-200 to-stone-300 text-stone-800 font-serif antialiased overflow-x-hidden">
       <div className="relative z-10 flex flex-col items-center min-h-screen p-4 sm:p-6">
         <Header />
-        <main className="flex-grow flex flex-col items-center justify-center w-full max-w-5xl mx-auto">
+        <main className="flex-grow flex flex-col items-center justify-center gap-10 w-full max-w-5xl mx-auto">
           
             {gameState === 'QUESTION' && <QuestionInput onSubmit={handleQuestionSubmit} isLoading={isLoading} />}
             {(gameState === 'SELECTING_SPREAD' || (isLoading && gameState === 'READING')) && <Loader />}
             
             {(gameState === 'CARD_SELECTION' || gameState === 'REVEALING' || gameState === 'READING') && spread && (
-              <div className="grid grid-cols-2 md:grid-cols-3  gap-4 sm:gap-10 my-8  justify-center items-center h-72 sm:h-80 perspective-1000">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 my-8 justify-center items-center h-72 sm:h-80 perspective-1000">
                 {drawnCards.map((card) => (
                     <Card key={card.position.name} drawnCard={card} />
                 ))}
@@ -127,28 +127,27 @@ const App: React.FC = () => {
 
             {gameState === 'CARD_SELECTION' && spread && cardsToSelect > 0 && (
                 <div className="text-center flex flex-col items-center">
-                    <p className="text-lg text-blue-300/90 mb-2">Select a card for: <span className="font-bold">{spread.positions[drawnCards.length].name}</span></p>
+                    <p className="text-lg text-blue-900 mb-2">Select a card for: <span className="font-bold">{spread.positions[drawnCards.length].name}</span></p>
                     <CardStream cards={availableCards} onSelectCard={handleSelectCard} />
                 </div>
             )}
 
             {gameState === 'CARD_SELECTION' && cardsToSelect === 0 && (
-                 <div className="my-6">
+                <div className="my-6">
                     <button
                     onClick={handleRevealAndRead}
-                    className="px-8 py-4 bg-stone-500/20 border-2 border-stone-400 rounded-full text-lg text-purple-200 font-bold shadow-[0_0_15px_rgba(192,132,252,0.4)] hover:bg-purple-500/40 hover:shadow-[0_0_25px_rgba(192,132,252,0.6)] transition-all duration-300"
                     >
                     Reveal Cards & Read Fate
                     </button>
                 </div>
             )}
 
-            <div className="w-full mt-4">
+            <div className="w-full text-center mt-4">
                 {error && <div className="text-center p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-200">{error}</div>}
                 {reading && !isLoading && gameState === 'READING' && (
                   <>
                     <ReadingDisplay reading={reading} />
-                    <button onClick={handleReset} className="mt-8 px-6 py-3 bg-purple-500/20 border-2 border-stone-400 rounded-full text-md text-purple-200 font-bold hover:bg-purple-500/40 transition-all duration-300">
+                    <button onClick={handleReset} className="mt-8 px-6 py-3 bg-stone-300 border-1 border-stone-400 rounded-full text-md text-stone-700 font-bold hover:bg-stone-500/40 transition-all duration-300">
                       Ask Another Question
                     </button>
                   </>
@@ -156,7 +155,7 @@ const App: React.FC = () => {
             </div>
         </main>
         
-        <footer className="w-full text-center p-4 text-gray-400 text-sm mt-auto">
+        <footer className="w-full text-center p-4 text-stone-500 text-sm mt-auto">
           <p>Designed by Rai Rezende. Powered by Gemini.</p>
         </footer>
       </div>

@@ -34,7 +34,7 @@ const ReadingDisplay: React.FC<ReadingDisplayProps> = ({ reading }) => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto bg-black/30 backdrop-blur-sm border border-purple-400/50 rounded-lg p-6 md:p-8 mt-4 animate-fade-in">
+    <div className="w-full max-w-4xl mx-auto bg-black/30 backdrop-blur-sm border border-stone-400/50 rounded-lg p-6 md:p-8 mt-4 animate-fade-in">
       <div className="prose prose-invert prose-p:text-purple-200 text-left">
         {formatReading(reading)}
       </div>
